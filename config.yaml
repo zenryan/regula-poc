@@ -1,4 +1,11 @@
 service:
+  storage:
+    type: fs
+  processing:
+    enabled: true
+    results:
+      location:
+        folder: storage
   webServer:
     port: 8080
     workers: 1
