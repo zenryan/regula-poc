@@ -1,4 +1,12 @@
 service:
+  sessionApi:
+    enabled: true
+    transactions:
+      location:
+        folder: "docreader-transactions"
+        prefix: "session-api"
+  database:
+    connectionString: "postgresql://postgres:development_password@postgres:5432/reguladb"
   storage:
     type: fs
   processing:
@@ -7,9 +15,10 @@ service:
       location:
         folder: storage
   webServer:
+    # host: https://779f71b40f26.ngrok-free.app
     port: 8080
     workers: 1
-    timeout: 30
+    timeout: 60
 
     demoApp:
       enabled: true
