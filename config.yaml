@@ -15,7 +15,6 @@ service:
       location:
         folder: storage
   webServer:
-    # host: https://779f71b40f26.ngrok-free.app
     port: 8080
     workers: 1
     timeout: 60
